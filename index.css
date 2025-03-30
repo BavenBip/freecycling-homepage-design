@@ -1,0 +1,299 @@
+/* UNIVERSAL SELECTOR: Selects the sections of your web page you wish to style */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0E402D;
+}
+
+/* TOP SECTION */
+
+.topSection {
+    width: 100%;
+    margin: 0px 0;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    background-color: #9d9101;
+}
+
+.logoContainer {
+    padding: 31.5px;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.navbar {
+    float: right;
+    padding: 20px 20px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;              /* Gets rid of default underline */
+    color:black;
+}
+
+.navbar ul li::after {                  /* Adds underline */
+    content:'';
+    height: 4px;
+    width: 0;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.searchContainer {
+    padding: 0 20px;
+}
+
+.searchBar {
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 5px 5px;
+}
+
+.searchBar input {
+    background: transparent;
+    width: 200px;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 27px;
+}
+
+.searchBar button {
+    background-color: transparent;
+    border: 0;
+    padding: 10px 10px;
+}
+
+/* MIDDLE SECTION */
+
+.middleSection {
+    display: grid;
+    overflow: hidden;
+    height: 550px;
+    grid-template-columns: 50% 50%;
+    column-gap: 4px;
+}
+
+.middleSectionRight {
+    width: 100%;
+    display: grid;
+    background-color: black;
+    border-right: 4px solid #9D9101;
+}
+
+.middleSectionLeft {
+    width: 100%;
+    float:left;
+}
+
+
+.button {
+    padding: 15px 25px;
+    font-size: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow:  0px 2px 2px 4px rgba(0,0,0,0.3);
+    box-shadow: inset 2px 1px 5px 1px rgb(230, 222, 188, 0.4);
+    /* color: #3A1242; */
+    background-color: #9D9101;
+}
+
+.button:hover {
+    background-color:#CABE7B;
+}
+
+.mid1 {
+    padding-top: 60px;
+    font-size: 96px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mid2 {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.mid3 {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* BOTTOM SECTION */
+
+.bottomSection {
+    height: 320px;
+    padding: 40px 50px;
+    display: grid;
+    column-gap: 1%;
+    grid-template-columns: 31% 2% 31% 2% 31%;
+    background-color:#0E402D;
+    border-top: 4px solid #9D9101;
+}
+
+.bottomGrid {
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.line {
+    width: 0px;
+    height: 58px;
+    margin: 112px 0;
+    border: 3px solid #9D9101;
+}
+
+/* MODAL WINDOW */
+
+.modalContent {
+    margin: auto;
+    width: 80%;
+}
+
+.registrationTitle {
+    padding: 35px 200px;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    color:white;
+}
+
+.close {
+    float: right;
+    padding: 0 10px;
+    font-size: 60px;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.close:hover, .close:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+form {
+    background-color: #0E402D;
+    margin: auto;
+    padding-bottom: 35px;
+    width: 50%;
+    clear: both;
+}
+
+label {
+    width: 100%;
+    display:inline-block;
+    margin: 5px;
+}
+
+.formBar {
+    background: transparent;
+    width: 450px;
+    height: 50px;
+    float: right;
+    border: 3px solid #9D9101;
+    outline: none;
+    padding: 1px 17px;
+    font-size: 28px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.signUpButton {
+    width: 25%;
+    height: 60px;
+    margin: 0 36%;
+    padding: 0px 50px;
+    border: 2px solid #9D9101;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:  0px 2px 2px 4px rgba(0,0,0,0.3);
+    box-shadow: inset 2px 1px 5px 1px rgb(230, 222, 188, 0.4);
+    color:black;
+    background-color: #9D9101;
+}
+
+.signUpButton:hover {
+    background-color: #CABE7B;
+}
+
+.tab {
+    padding: 40px;
+}
+
+label.gap {
+    padding:2px;
+    line-height: 1.7;         /* Can line input bar with label */
+    color: white;
+}
+
+h3.about {
+    padding-top: 20px;
+    font-size: 36px;
+}
+
+/* IMAGES */
+
+img.searchIcon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+img.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+img.chair {
+    width:100%;
+    height: 100%;
+}
+
+/* COLOURS */
+.white{color:#FFFFFF;}
+.black{color:#000000}
+.yellow-main{background-color:#9D9101;}
+.yellow-light-2{background-color:#CABE7B;}
+.green{background-color:#0E402D;}

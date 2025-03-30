@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Freecycling!</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+<style>
+body {
+    font-family: 'Philosopher';
+}
+
+#form-ct {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#user-details {
+    padding: 15px 70px;
+    grid-template-columns: auto; 
+    row-gap: 4px;
+    font-size: 32px;
+    text-align: right; 
+}
+
+#address-details {
+    padding: 25px 70px;
+    grid-template-columns: auto; 
+    row-gap: 4px;
+    font-size: 32px;
+    text-align: right; 
+}
+
+#contact-details {
+    padding: 25px 70px;
+    padding-bottom: 35px;
+    display: grid;
+    grid-template-columns: auto; 
+    row-gap: 4px;
+    font-size: 32px;
+    text-align: right; 
+    outline:none;
+    border: none;
+}
+
+</style>
+</head>
+<body>
+
+<header class="topSection">
+    <div class="logoContainer">
+        <a href="#"> <img class="searchIcon" src="logo.png" alt="Freecycle logo"></a>
+        <a href="#"><h1 style="display: inline-block" class="black"> Freecycling! </h1></a>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><h2><a href="#"> Home </a></h2></li>
+            <li><h2><a href="#"> About </a></h2></li>
+            <li><h2><a href="#"> Contact </a></h2></li>
+        </ul>
+        <div class="searchContainer">
+            <form action="" class="searchBar">
+                <input type="text" placeholder="Search">
+                <button type="submit"> <img class="searchIcon" src="search_icon.png" alt="search icon"> </button>
+            </form>
+        </div>
+    
+        <ul>
+            <li><h2><a href="#"> Login </a></h2></li>
+        </ul>
+        <h2>|</h2>
+        <ul>
+            <li><h2><a href="#" id="trigger-modal"> Sign up </a></h2></li>
+        </ul>
+    </div>
+</header>
+
+<div class = "middleSection">
+    <div class = "middleSectionRight">
+        <div class="mid1">
+            <p class="white"> Free to Give </p>
+        </div>
+        <div class="mid2">
+            <p class="white"> Have items but you don’t want to throw away? We’ll do it for free! </p>
+            <p class="white"> Join our network of over 2000 local communities across the globe, uniting 
+                eco-minded individuals to embrace the spirit of sustainability to preserve valuable resources. 
+            </p>
+        </div>
+        <div class="mid3">
+            <button class="button"><b> Learn More </b></button>
+        </div>
+    </div>
+    <div class = "middleSectionLeft"><img class="chair" src="supportimage.png" alt="yellow chair"></div>
+</div>
+
+<div class = "bottomSection">
+    <div class="bottomGrid">
+        <h3 class="about">About Freecycling!</h3>
+        <br>
+        <p> Freecycling! is a nonprofit promoting sustainability, born when individuals 
+            saw usable items being discarded and connected with nearby nonprofits to find 
+            them new homes. </p>
+    </div>
+    <div class="line"></div>
+    <div class="bottomGrid">
+        
+        <h3 class="about">Our Mission</h3>
+        <br>
+        <p> Our mission is to cultivate global sharing to minimize waste and conserve 
+            resources. Unite individuals worldwide for environmental responsibility 
+            through generosity and collaboration. </p>
+        
+    </div>
+    <div class="line"></div>
+    <div class="bottomGrid">
+        <h3 class="about">How does it work?</h3>
+        <br>
+        <p> When you register on Freecycling! at the top right, you  can join 
+            local groups or create nearby friend circles. Share items you want to give away or receive, 
+            coordinate pick-up with members, rescuing items from landfills, giving them a second chance. </p>
+    </div>    
+</div>
+
+
+<div id="form-ct">
+    <form>
+        <span class="close">&times;</span>
+        <h2 class="registrationTitle">Registration Form</h2>
+        <div id="user-details">
+            <label class="gap" for="gname">Given name:
+                <span class="tab">
+                <input class="formBar" type="text" id="gname" name="gname" placeholder="Eg. Jane">
+                </span>
+            </label>
+            <label class="gap" for="sname">Surname:
+                <span class="tab">
+                <input class="formBar" type="text" id="sname" name="sname" placeholder="Eg. Doe">
+                </span>
+            </label>
+            <label class="gap" for="uname">Username:
+                <span class="tab">
+                <input class="formBar" type="text" id="uname" name="uname" placeholder="Eg. Jane123">
+                </span>
+            </label>
+            <label class="gap" for="pword">Password:
+                <span class="tab">
+                <input class="formBar" type="text" id="pword" name="pword" placeholder="At least 8 characters">
+                </span>
+            </label>
+        </div>
+
+        <div id="address-details">
+            <label class="gap" for="haddr">Home address:
+                <span class="tab">
+                <input class="formBar" type="text" id="haddr" name="haddr" placeholder="Eg. 43 Manukau Street, Avondale">
+                </span>
+            </label>
+            
+            <label class="gap" for="waddr">Work address:
+                <span class="tab">
+                <input class="formBar" type="text" id="waddr" name="waddr" placeholder="Eg. 26 High Street, Auckland CBD">
+                </span>
+            </label>
+        </div>
+
+        <div id="contact-details">
+            <label class="gap" for="mnum">Mobile number:
+                <span class="tab">
+                <input class="formBar" type="text" id="mnum" name="mnum" placeholder="Eg. 0242069581">
+                </span>
+            </label>
+            <label class="gap" for="email">Email:
+                <span class="tab">
+                <input class="formBar" type="text" id="email" name="email" placeholder="Eg. Example@gmail.com">
+                </span>
+            </label>
+        </div>
+        <button class="signUpButton">Sign up</button></div>
+
+    </form>
+</div>
+
+<script>
+
+var modal = document.getElementById("form-ct");
+var modalButton = document.getElementById("trigger-modal");
+var span = document.getElementsByClassName("close")[0];
+
+modalButton.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+</script>
+</body>
+</html>
